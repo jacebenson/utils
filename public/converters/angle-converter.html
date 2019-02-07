@@ -1,0 +1,129 @@
+<!DOCTYPE html >
+
+<head>
+    <title>Online Angle Converter</title>
+    <meta http-equiv="content-language" content="en-US">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link href="/img/cb.png" rel="icon" />
+    <meta property="fb:app_id" content="" />
+    <meta property="og:url" content="https://utils.jacebenson.com/converters/angle-converter" />
+    <meta name="description" content="Convert angle to and from degreen, mil,circle etc." />
+    <meta name="author" content="Jace" />
+    <meta name="Keywords" content="degree, mil,circle" />
+    <!--<meta property="og:image" content="https://codebeautify.org/img/cb/logo.png" />-->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Online Angle Converter" />
+    <meta name="twitter:description" content="Convert angle to and from degreen, mil,circle etc." />
+    <!--<meta name="twitter:image" content="https://codebeautify.org/img/cb/logo.png" />-->
+    <meta name="twitter:url" content="https://utils.jacebenson.com/converters/angle-converter">
+    <meta name="twitter:creator" content="@jacebenson">
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <link href="/img/cb.png" rel="icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body id="cbBody">
+    <script src="/js/unitconverter.js"></script>
+    <div class="container-fluid">
+        <div class="row-fluid back" style="padding-top: 0">
+            <div class="span12">
+                <div class="span12" style="border-bottom: 1px solid #e5e5e5;">
+                    <div style="float: left;">
+                        <h1 style="text-align: left; padding-left: 10PX; padding: 15PX; padding-top: 0; padding-bottom: 0; color: rgba(114, 114, 114, 1); letter-spacing: 1.5px; font-size: 24px;"
+                            id="subTitle">Angle Converter </h1>
+                    </div>
+                </div>
+                <div class="span12" style="padding: 15px;">
+                    <div class="span12" style="margin: 0;">
+                        <div class="span10">
+                            <div class="span6">
+                                <h5> From: <span id="select_from_title"></span> </h5>
+                                <input  type="text" 
+                                        class="span12"
+                                        id="from_input" 
+                                        value="1" 
+                                        onchange="convert('angle-converter');"
+                                        onkeyup="convert('angle-converter');"
+                                /> 
+                                <select size="15" 
+                                        style="height: 555px;"
+                                        class="span12" 
+                                        id="from_select" 
+                                        onchange="convert('angle-converter');"
+                                >
+                                    <option value="0" selected="selected">arcminute</option>
+                                    <option value="1">arcsecond</option>
+                                    <option value="2">circle</option>
+                                    <option value="3">degree</option>
+                                    <option value="4">gon</option>
+                                    <option value="5">grad</option>
+                                    <option value="6">mil (Nato)</option>
+                                    <option value="7">mil (Soviet Union)</option>
+                                    <option value="8">mil (Sweden)</option>
+                                    <option value="9">octant</option>
+                                    <option value="10">quadrant</option>
+                                    <option value="11">radian</option>
+                                    <option value="12">revolution</option>
+                                    <option value="13">sextant</option>
+                                    <option value="14">sign</option>
+                                    <option value="15">turn</option>
+                                </select>
+                            </div>
+                            <div class="span6">
+                                <h5> To: <span id="select_to_title"></span> </h5> 
+                                <input  type="text" 
+                                        class="span12" 
+                                        id="to_input"
+                                        readonly="readonly" /> 
+                                    <select size="15" 
+                                            style="height: 555px;" 
+                                            class="span12" 
+                                            id="to_select"
+                                            onchange="convert('angle-converter');"
+                                    >
+                                    <option value="0" selected="selected">arcminute</option>
+                                    <option value="1">arcsecond</option>
+                                    <option value="2">circle</option>
+                                    <option value="3">degree</option>
+                                    <option value="4">gon</option>
+                                    <option value="5">grad</option>
+                                    <option value="6">mil (Nato)</option>
+                                    <option value="7">mil (Soviet Union)</option>
+                                    <option value="8">mil (Sweden)</option>
+                                    <option value="9">octant</option>
+                                    <option value="10">quadrant</option>
+                                    <option value="11">radian</option>
+                                    <option value="12">revolution</option>
+                                    <option value="13">sextant</option>
+                                    <option value="14">sign</option>
+                                    <option value="15">turn</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+  convert('angle-converter');
+  
+  $("#"+'angle-converter').addClass( "currentselected" );
+  $("#"+'angle-converter span a').attr('href','#');
+  
+  </script>
+    </div>
+    <script src="/js/common_load_with_home.js"></script>
+    <script>
+
+      $(document).ready(function() {
+          //called after everything loaded
+          setDefaultData();
+          conditionalCode();
+          $("#me").click();
+      });
+  
+  </script>
+</body>
+
+</html>
