@@ -17,22 +17,32 @@
                     return '/converters/'+url.name + '.html';
                 }
             })
-            .when('/converters/:name*',{
+            .when('/editors/:name*',{
                 templateUrl:function(url){
-                    return '/converters/'+url.name + '.html';
+                    return '/editors/'+url.name + '.html';
                 }
             })
-            .when('/converters/:name*',{
+            .when('/string/:name*',{
                 templateUrl:function(url){
-                    return '/converters/'+url.name + '.html';
+                    return '/string/'+url.name + '.html';
                 }
             })
-            .when('/converters/:name*',{
+            .when('/number/:name*',{
                 templateUrl:function(url){
-                    return '/converters/'+url.name + '.html';
+                    return '/number/'+url.name + '.html';
                 }
             })
-            .otherwise({ redirectTo: '/' });
+            .when('/image/:name*',{
+                templateUrl:function(url){
+                    return '/image/'+url.name + '.html';
+                }
+            })
+            .when('/other/:name*',{
+                templateUrl:function(url){
+                    return '/other/'+url.name + '.html';
+                }
+            })
+            .otherwise({ templateUrl: '/404.html' });
     });
 })();
 
