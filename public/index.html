@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html ng-app='sampleApp'>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<head>
+    <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.9/angular.js" data-semver="1.4.9"></script>
+    <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.9/angular-route.js" data-semver="1.4.9"></script>
+    <script src="/script.js"></script>
+    <script src="headerController.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>Sidebar template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+
+<body ng-app='sampleApp'>
+    <div class="page-wrapper chiller-theme toggled">
+        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+            <i class="fas fa-bars"></i>
+        </a>
+        <nav id="sidebar" class="sidebar-wrapper" ng-controller="HeaderController">
+            <div class="sidebar-content">
+                <div class="sidebar-brand">
+                    <a href="#"></a>
+                    <div id="close-sidebar">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="sidebar-search">
+                    <div>
+                        <div class="input-group">
+                            <input type="text" class="form-control search-menu" placeholder="Search...">
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- sidebar-search  -->
+                <div class="sidebar-menu">
+                    <ul>
+                        <li class="header-menu">
+                            <span>General</span>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-bell"></i>
+                                <span>Dashboard</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                        <li ng-class="{ active: isActive('/')}"><a href="#/">Home</a></li>
+                                        <li ng-class="{ active: isActive('/about')}"><a href="#/about">About</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>Converters</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    
+                                        <li ng-class="{ active: isActive('/converters/unitconverter')}"><a href="#/converters/unitconverter">Unit-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/length-converter')}"><a href="#/converters/length-converter">Length-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/weight-converter')}"><a href="#/converters/weight-converter">Weight-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/volume-converter')}"><a href="#/converters/volume-converter">Volume-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/area-converter')}"><a href="#/converters/area-converter">Area-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/temperature-converter')}"><a href="#/converters/temperature-converter">Temperature-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/density-converter')}"><a href="#/converters/density-converter">Density-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/electric-current-converter')}"><a href="#/converters/electric-current-converter">Electric-Current-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/speed-converter')}"><a href="#/converters/speed-converter">Speed-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/angle-converter')}"><a href="#/converters/angle-converter">Angle-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/bytes-bits-converter')}"><a href="#/converters/bytes-bits-converter">bytes-bits-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/energy-converter')}"><a href="#/converters/energy-converter">Energy-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/force-converter')}"><a href="#/converters/force-converter">Force-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/fuel-converter')}"><a href="#/converters/fuel-converter">Fuel-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/mass-converter')}"><a href="#/converters/mass-converter">Mass-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/power-converter')}"><a href="#/converters/power-converter">Power-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/pressure-converter')}"><a href="#/converters/pressure-converter">Pressure-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/time-converter')}"><a href="#/converters/time-converter">Time-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/astronomical-converter')}"><a href="#/converters/astronomical-converter">Astronomical-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/frequency-converter')}"><a href="#/converters/frequency-converter">Frequency-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/unix-timestamp-converter')}"><a href="#/converters/unix-timestamp-converter">Unix-Timestamp-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/word-to-html-converter')}"><a href="#/converters/Word-to-html-converter">Word-to-html-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/json-to-java-converter')}"><a href="#/converters/json-to-java-converter">json-to-java-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/xml-to-java-converter')}"><a href="#/converters/xml-to-java-converter">xml-to-java-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/online-tableizer')}"><a href="#/converters/online-tableizer">Online-Tableizer</a></li>
+                                        <li ng-class="{ active: isActive('/converters/html-to-csv-converter')}"><a href="#/converters/html-to-csv-converter">html-to-csv-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/html-to-tsv-converter')}"><a href="#/converters/html-to-tsv-converter">html-to-tsv-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/html-to-php-converter')}"><a href="#/converters/html-to-php-converter">html-to-php-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/xml-xsl-transform')}"><a href="#/converters/xml-xsl-transform">xml-xsl-Transform</a></li>
+                                        <li ng-class="{ active: isActive('/converters/xml-to-json')}"><a href="#/converters/xml-to-json">xml-to-json</a></li>
+                                        <li ng-class="{ active: isActive('/converters/json-to-xml')}"><a href="#/converters/json-to-xml">json-to-xml</a></li>
+                                        <li ng-class="{ active: isActive('/converters/csv-to-xml-json')}"><a href="#/converters/csv-to-xml-json">csv-to-xml-json</a></li>
+                                        <li ng-class="{ active: isActive('/converters/yaml-converter')}"><a href="#/converters/yaml-converter">yaml-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/image-to-base64')}"><a href="#/converters/image-to-base64">image-to-base64</a></li>
+                                        <li ng-class="{ active: isActive('/converters/base64-to-image')}"><a href="#/converters/base64-to-image">base64-to-image</a></li>
+                                        <li ng-class="{ active: isActive('/converters/date-Calculater')}"><a href="#/converters/date-Calculater">date-Calculater</a></li>
+                                        <li ng-class="{ active: isActive('/converters/excel-to-html')}"><a href="#/converters/excel-to-html">excel-to-html</a></li>
+                                        <li ng-class="{ active: isActive('/converters/excel-to-xml')}"><a href="#/converters/excel-to-xml">excel-to-xml</a></li>
+                                        <li ng-class="{ active: isActive('/converters/excel-to-json')}"><a href="#/converters/excel-to-json">excel-to-json</a></li>
+                                        <li ng-class="{ active: isActive('/converters/json-to-yaml')}"><a href="#/converters/json-to-yaml">json-to-yaml</a></li>
+                                        <li ng-class="{ active: isActive('/converters/xml-to-yaml')}"><a href="#/converters/xml-to-yaml">xml-to-yaml</a></li>
+                                        <li ng-class="{ active: isActive('/converters/csv-to-xml')}"><a href="#/converters/csv-to-xml">csv-to-xml</a></li>
+                                        <li ng-class="{ active: isActive('/converters/csv-to-json')}"><a href="#/converters/csv-to-json">csv-to-json</a></li>
+                                        <li ng-class="{ active: isActive('/converters/csv-to-html')}"><a href="#/converters/csv-to-html">csv-to-html</a></li>
+                                        <li ng-class="{ active: isActive('/converters/csv-to-tsv')}"><a href="#/converters/csv-to-tsv">csv-to-tsv</a></li>
+                                        <li ng-class="{ active: isActive('/converters/json-to-csv')}"><a href="#/converters/json-to-csv">json-to-csv</a></li>
+                                        <li ng-class="{ active: isActive('/converters/json-to-tsv')}"><a href="#/converters/json-to-tsv">json-to-tsv</a></li>
+                                        <li ng-class="{ active: isActive('/converters/xml-to-csv')}"><a href="#/converters/xml-to-csv">xml-to-csv</a></li>
+                                        <li ng-class="{ active: isActive('/converters/xml-to-tsv')}"><a href="#/converters/xml-to-tsv">xml-to-tsv</a></li>
+                                        <li ng-class="{ active: isActive('/converters/html-to-csv')}"><a href="#/converters/html-to-csv">html-to-csv</a></li>
+                                        <li ng-class="{ active: isActive('/converters/csv-to-multiline-data')}"><a href="#/converters/csv-to-multiline-data">csv-to-multiline-data</a></li>
+                                        <li ng-class="{ active: isActive('/converters/csv-to-sql')}"><a href="#/converters/csv-to-sql">csv-to-sql</a></li>
+                                        <li ng-class="{ active: isActive('/converters/sql-to-csv-converter')}"><a href="#/converters/sql-to-csv-converter">sql-to-csv-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/sql-to-json-converter')}"><a href="#/converters/sql-to-json-converter">sql-to-json-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/sql-to-xml-converter')}"><a href="#/converters/sql-to-xml-converter">sql-to-xml-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/sql-to-yaml-converter')}"><a href="#/converters/sql-to-yaml-converter">sql-to-yaml-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/sql-to-html-converter')}"><a href="#/converters/sql-to-html-converter">sql-to-html-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/opml-to-json')}"><a href="#/converters/opml-to-json">opml-to-json</a></li>
+                                        <li ng-class="{ active: isActive('/converters/hex-to-pantone-converter')}"><a href="#/converters/hex-to-pantone-converter">hex-to-pantone-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/rgb-to-pantone-converter')}"><a href="#/converters/rgb-to-pantone-converter">rgb-to-pantone-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/hsv-to-pantone-converter')}"><a href="#/converters/hsv-to-pantone-converter">hsv-to-pantone-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/cmyk-to-pantone-converter')}"><a href="#/converters/cmyk-to-pantone-converter">cmyk-to-pantone-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/cmyk-to-hex-converter')}"><a href="#/converters/cmyk-to-hex-converter">cmyk-to-hex-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/cmyk-to-rgb-converter')}"><a href="#/converters/cmyk-to-rgb-converter">cmyk-to-rgb-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/cmyk-to-hsv-converter')}"><a href="#/converters/cmyk-to-hsv-converter">cmyk-to-hsv-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/hsv-to-hex-converter')}"><a href="#/converters/hsv-to-hex-converter">hsv-to-hex-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/hsv-to-rgb-converter')}"><a href="#/converters/hsv-to-rgb-converter">hsv-to-rgb-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/hsv-to-cmyk-converter')}"><a href="#/converters/hsv-to-cmyk-converter">hsv-to-cmyk-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/hex-to-hsv-converter')}"><a href="#/converters/hex-to-hsv-converter">hex-to-hsv-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/rgb-to-hex-converter')}"><a href="#/converters/rgb-to-hex-converter">rgb-to-hex-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/rgb-to-hsv-converter')}"><a href="#/converters/rgb-to-hsv-converter">rgb-to-hsv-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/rgb-to-cmyk-converter')}"><a href="#/converters/rgb-to-cmyk-converter">rgb-to-cmyk-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/hex-to-rgb-converter')}"><a href="#/converters/hex-to-rgb-converter">hex-to-rgb-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/hex-to-cmyk-converter')}"><a href="#/converters/hex-to-cmyk-converter">hex-to-cmyk-converter</a></li>
+                                        <li ng-class="{ active: isActive('/converters/json-to-html')}"><a href="#/converters/json-to-html">json-to-html</a></li>
+                                        <li ng-class="{ active: isActive('/converters/xml-to-html')}"><a href="#/converters/xml-to-html">xml-to-html</a></li>
+                                        <li ng-class="{ active: isActive('/converters/json-to-excel')}"><a href="#/converters/json-to-excel">json-to-excel</a></li>
+                                        <li ng-class="{ active: isActive('/converters/xml-to-excel')}"><a href="#/converters/xml-to-excel">xml-to-excel</a></li>
+                                        <li ng-class="{ active: isActive('/converters/csv-to-excel')}"><a href="#/converters/csv-to-excel">csv-to-excel</a></li>
+                                        <li ng-class="{ active: isActive('/converters/yaml-to-excel')}"><a href="#/converters/converters/yaml-to-excel">yaml-to-excel</a></li>
+    
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="far fa-gem"></i>
+                                <span>Viewers and Editors</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                        <li ng-class="{ active: isActive('/Web-viewer-/-editor')}"><a href="#/Web-viewer-/-editor">Web-viewer-/-editor</a></li>
+                                        <li ng-class="{ active: isActive('/json-viewer')}"><a href="#/json-viewer">json-viewer</a></li>
+                                        <li ng-class="{ active: isActive('/xml-viewer')}"><a href="#/xml-viewer">xml-viewer</a></li>
+                                        <li ng-class="{ active: isActive('/mxml-viewer')}"><a href="#/mxml-viewer">mxml-viewer</a></li>
+                                        <li ng-class="{ active: isActive('/html-viewer')}"><a href="#/html-viewer">html-viewer</a></li>
+                                        <li ng-class="{ active: isActive('/css-beautify-and-minify')}"><a href="#/css-beautify-and-minify">css-beautify-and-minify</a></li>
+                                        <li ng-class="{ active: isActive('/javascript-viewer')}"><a href="#/javascript-viewer">javascript-viewer</a></li>
+                                        <li ng-class="{ active: isActive('/rss-viewer')}"><a href="#/rss-viewer">rss-viewer</a></li>
+                                        <li ng-class="{ active: isActive('/source-code-viewer')}"><a href="#/source-code-viewer">source-code-viewer</a></li>
+                                        <li ng-class="{ active: isActive('/opml-viewer')}"><a href="#/opml-viewer">opml-viewer</a></li>
+    
+                                        <li ng-class="{ active: isActive('/Programming-Editors')}"><a href="#/Programming-Editors">Programming-Editors</a></li>
+                                        <li ng-class="{ active: isActive('/xml-editor')}"><a href="#/xml-editor">xml-editor</a></li>
+                                        <li ng-class="{ active: isActive('/json-editor')}"><a href="#/json-editor">json-editor</a></li>
+                                        <li ng-class="{ active: isActive('/online-editor')}"><a href="#/online-editor">online-editor</a></li>
+                                        <li ng-class="{ active: isActive('/java-editor')}"><a href="#/java-editor">java-editor</a></li>
+                                        <li ng-class="{ active: isActive('/c#-editor')}"><a href="#/C#-editor">C#-editor</a></li>
+                                        <li ng-class="{ active: isActive('/action-script-editor')}"><a href="#/action-script-editor">action-script-editor</a></li>
+                                        <li ng-class="{ active: isActive('/sql-Formatter')}"><a href="#/sql-Formatter">sql-Formatter</a></li>
+    
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-chart-line"></i>
+                                <span>String Utilities</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                        <li ng-class="{ active: isActive('/Random-Word-Generator')}"><a href="#/Random-Word-Generator">Random-Word-Generator</a></li>
+                                        <li ng-class="{ active: isActive('/NTLM-Hash-Generator')}"><a href="#/NTLM-Hash-Generator">NTLM-Hash-Generator</a></li>
+                                        <li ng-class="{ active: isActive('/Password-Generator')}"><a href="#/Password-Generator">Password-Generator</a></li>
+                                        <li ng-class="{ active: isActive('/String-Builder')}"><a href="#/String-Builder">String-Builder</a></li>
+                                        <li ng-class="{ active: isActive('/NUMBER-to-WORD-converter')}"><a href="#/NUMBER-to-WORD-converter">NUMBER-to-WORD-converter</a></li>
+                                        <li ng-class="{ active: isActive('/WORD-COUNTER')}"><a href="#/WORD-COUNTER">WORD-COUNTER</a></li>
+                                        <li ng-class="{ active: isActive('/Reverse-String')}"><a href="#/Reverse-String">Reverse-String</a></li>
+                                        <li ng-class="{ active: isActive('/html-Encode')}"><a href="#/html-Encode">html-Encode</a></li>
+                                        <li ng-class="{ active: isActive('/html-Decode')}"><a href="#/html-Decode">html-Decode</a></li>
+                                        <li ng-class="{ active: isActive('/base64-Encode')}"><a href="#/base64-Encode">base64-Encode</a></li>
+                                        <li ng-class="{ active: isActive('/base64-Decode')}"><a href="#/base64-Decode">base64-Decode</a></li>
+                                        <li ng-class="{ active: isActive('/URL-Encode-A-String')}"><a href="#/URL-Encode-A-String">URL-Encode-A-String</a></li>
+                                        <li ng-class="{ active: isActive('/URL-Decode-A-String')}"><a href="#/URL-Decode-A-String">URL-Decode-A-String</a></li>
+                                        <li ng-class="{ active: isActive('/String-to-hex-converter')}"><a href="#/String-to-hex-converter">String-to-hex-converter</a></li>
+                                        <li ng-class="{ active: isActive('/hex-to-String-converter')}"><a href="#/hex-to-String-converter">hex-to-String-converter</a></li>
+                                        <li ng-class="{ active: isActive('/String-to-Binary-converter')}"><a href="#/String-to-Binary-converter">String-to-Binary-converter</a></li>
+                                        <li ng-class="{ active: isActive('/Binary-to-String-converter')}"><a href="#/Binary-to-String-converter">Binary-to-String-converter</a></li>
+                                        <li ng-class="{ active: isActive('/Case-converter')}"><a href="#/Case-converter">Case-converter</a></li>
+                                        <li ng-class="{ active: isActive('/Delimited-Text-Extractor')}"><a href="#/Delimited-Text-Extractor">Delimited-Text-Extractor</a></li>
+                                        <li ng-class="{ active: isActive('/Remove-Accents')}"><a href="#/Remove-Accents">Remove-Accents</a></li>
+                                        <li ng-class="{ active: isActive('/Remove-Duplicate-Lines')}"><a href="#/Remove-Duplicate-Lines">Remove-Duplicate-Lines</a></li>
+                                        <li ng-class="{ active: isActive('/Remove-Empty-Lines')}"><a href="#/Remove-Empty-Lines">Remove-Empty-Lines</a></li>
+                                        <li ng-class="{ active: isActive('/Remove-Extra-Spaces')}"><a href="#/Remove-Extra-Spaces">Remove-Extra-Spaces</a></li>
+                                        <li ng-class="{ active: isActive('/Remove-Line-Breaks')}"><a href="#/Remove-Line-Breaks">Remove-Line-Breaks</a></li>
+                                        <li ng-class="{ active: isActive('/Remove-Lines-Containing')}"><a href="#/Remove-Lines-Containing">Remove-Lines-Containing</a></li>
+                                        <li ng-class="{ active: isActive('/Sort-Text-Lines')}"><a href="#/Sort-Text-Lines">Sort-Text-Lines</a></li>
+                                        <li ng-class="{ active: isActive('/escape-unescape-Tools')}"><a href="#/escape-unescape-Tools">escape-unescape-Tools</a></li>
+                                    <li ng-class="{ active: isActive('/html-escape-unescape')}"><a href="#/html-escape-unescape">html-escape-unescape</a></li>
+                                    <li ng-class="{ active: isActive('/xml-escape-unescape')}"><a href="#/xml-escape-unescape">xml-escape-unescape</a></li>
+                                    <li ng-class="{ active: isActive('/java-escape-unescape')}"><a href="#/java-escape-unescape">java-escape-unescape</a></li>
+                                    <li ng-class="{ active: isActive('/C#-escape-unescape')}"><a href="#/C#-escape-unescape">C#-escape-unescape</a></li>
+                                    <li ng-class="{ active: isActive('/javascript-escape-unescape')}"><a href="#/javascript-escape-unescape">javascript-escape-unescape</a></li>
+                                    <li ng-class="{ active: isActive('/csv-escape-unescape')}"><a href="#/csv-escape-unescape">csv-escape-unescape</a></li>
+                                    <li ng-class="{ active: isActive('/sql-escape-unescape')}"><a href="#/sql-escape-unescape">sql-escape-unescape</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-globe"></i>
+                                <span>Number Utilities</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                        <li ng-class="{ active: isActive('/All-Numbers-converter')}"><a href="#/All-Numbers-converter">All-Numbers-converter</a></li>
+                                        <li ng-class="{ active: isActive('/Decimal-to-Binary-converter')}"><a href="#/Decimal-to-Binary-converter">Decimal-to-Binary-converter</a></li>
+                                        <li ng-class="{ active: isActive('/Decimal-to-Hexa-converter')}"><a href="#/Decimal-to-Hexa-converter">Decimal-to-Hexa-converter</a></li>
+                                        <li ng-class="{ active: isActive('/Decimal-to-Octal-converter')}"><a href="#/Decimal-to-Octal-converter">Decimal-to-Octal-converter</a></li>
+                                        <li ng-class="{ active: isActive('/Binary-to-Decimal-converter')}"><a href="#/Binary-to-Decimal-converter">Binary-to-Decimal-converter</a></li>
+                                        <li ng-class="{ active: isActive('/Binary-to-hex-converter')}"><a href="#/Binary-to-hex-converter">Binary-to-hex-converter</a></li>
+                                        <li ng-class="{ active: isActive('/Binary-to-Octal-converter')}"><a href="#/Binary-to-Octal-converter">Binary-to-Octal-converter</a></li>
+                                        <li ng-class="{ active: isActive('/hex-to-Decimal-converter')}"><a href="#/hex-to-Decimal-converter">hex-to-Decimal-converter</a></li>
+                                        <li ng-class="{ active: isActive('/hex-to-Binary-converter')}"><a href="#/hex-to-Binary-converter">hex-to-Binary-converter</a></li>
+                                        <li ng-class="{ active: isActive('/hex-to-Octal-converter')}"><a href="#/hex-to-Octal-converter">hex-to-Octal-converter</a></li>
+                                        <li ng-class="{ active: isActive('/Octal-to-Decimal-converter')}"><a href="#/Octal-to-Decimal-converter">Octal-to-Decimal-converter</a></li>
+                                        <li ng-class="{ active: isActive('/Octal-to-Binary-converter')}"><a href="#/Octal-to-Binary-converter">Octal-to-Binary-converter</a></li>
+                                        <li ng-class="{ active: isActive('/Octal-to-hex-converter')}"><a href="#/Octal-to-hex-converter">Octal-to-hex-converter</a></li>
+    
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-globe"></i>
+                                <span>Image Converters</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                        <li ng-class="{ active: isActive('/JPG-to-PNG-converter')}"><a href="#/JPG-to-PNG-converter">JPG-to-PNG-converter</a></li>
+                                        <li ng-class="{ active: isActive('/BMP-to-PNG-converter')}"><a href="#/BMP-to-PNG-converter">BMP-to-PNG-converter</a></li>
+                                        <li ng-class="{ active: isActive('/GIF-to-PNG-converter')}"><a href="#/GIF-to-PNG-converter">GIF-to-PNG-converter</a></li>
+                                        <li ng-class="{ active: isActive('/PNG-to-JPG-converter')}"><a href="#/PNG-to-JPG-converter">PNG-to-JPG-converter</a></li>
+                                        <li ng-class="{ active: isActive('/BMP-to-JPG-converter')}"><a href="#/BMP-to-JPG-converter">BMP-to-JPG-converter</a></li>
+                                        <li ng-class="{ active: isActive('/GIF-to-JPG-converter')}"><a href="#/GIF-to-JPG-converter">GIF-to-JPG-converter</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                                <a href="#">
+                                    <i class="fa fa-tachometer-alt"></i>
+                                    <span>Other Tools</span>
+                                </a>
+                                <div class="sidebar-submenu">
+                                    <ul>
+                                        <li ng-class="{ active: isActive('/Other-Tools')}"><a href="#/Other-Tools">Other-Tools</a></li>
+                                        <li ng-class="{ active: isActive('/Lorem-Ipsum')}"><a href="#/Lorem-Ipsum">Lorem-Ipsum</a></li>
+                                        <li ng-class="{ active: isActive('/Hostname-to-IP')}"><a href="#/Hostname-to-IP">Hostname-to-IP</a></li>
+                                        <li ng-class="{ active: isActive('/IP-to-Hostname')}"><a href="#/IP-to-Hostname">IP-to-Hostname</a></li>
+                                        <li ng-class="{ active: isActive('/DNS-Lookup')}"><a href="#/DNS-Lookup">DNS-Lookup</a></li>
+                                        <li ng-class="{ active: isActive('/MX-Lookup')}"><a href="#/MX-Lookup">MX-Lookup</a></li>
+                                        <li ng-class="{ active: isActive('/Nameserver-Lookup')}"><a href="#/Nameserver-Lookup">Nameserver-Lookup</a></li>
+                                        <li ng-class="{ active: isActive('/Website-to-IP-Address')}"><a href="#/Website-to-IP-Address">Website-to-IP-Address</a></li>
+                                        <li ng-class="{ active: isActive('/Open-Port-Checker')}"><a href="#/Open-Port-Checker">Open-Port-Checker</a></li>
+    
+                                        <li ng-class="{ active: isActive('/Utility')}"><a href="#/Utility">Utility</a></li>
+                                        <li ng-class="{ active: isActive('/Responsive-Website-Tester')}"><a href="#/Responsive-Website-Tester">Responsive-Website-Tester</a></li>
+                                        <li ng-class="{ active: isActive('/Credit-Card-Fake-Number-Generator')}"><a href="#/Credit-Card-Fake-Number-Generator">Credit-Card-Fake-Number-Generator</a></li>
+                                        <li ng-class="{ active: isActive('/XPath-Tester')}"><a href="#/XPath-Tester">XPath-Tester</a></li>
+                                        <li ng-class="{ active: isActive('/json-Path-Tester')}"><a href="#/json-Path-Tester">json-Path-Tester</a></li>
+                                        <li ng-class="{ active: isActive('/json-Minifier')}"><a href="#/json-Minifier">json-Minifier</a></li>
+                                        <li ng-class="{ active: isActive('/File-Difference')}"><a href="#/File-Difference">File-Difference</a></li>
+                                        <li ng-class="{ active: isActive('/json-Diff')}"><a href="#/json-Diff">json-Diff</a></li>
+                                        <li ng-class="{ active: isActive('/xml-DiffNew')}"><a href="#/xml-DiffNew">xml-DiffNew</a></li>
+                                        <li ng-class="{ active: isActive('/Broken-Link-Checker')}"><a href="#/Broken-Link-Checker">Broken-Link-Checker</a></li>
+    
+                                        <li ng-class="{ active: isActive('/Validators')}"><a href="#/Validators">Validators</a></li>
+                                        <li ng-class="{ active: isActive('/css-Validator')}"><a href="#/css-Validator">css-Validator</a></li>
+                                        <li ng-class="{ active: isActive('/javascript-Validator')}"><a href="#/javascript-Validator">javascript-Validator</a></li>
+                                        <li ng-class="{ active: isActive('/json-Validator')}"><a href="#/json-Validator">json-Validator</a></li>
+                                        <li ng-class="{ active: isActive('/xml-Validator')}"><a href="#/xml-Validator">xml-Validator</a></li>
+                                        <li ng-class="{ active: isActive('/CREDIT-CARD-Validator')}"><a href="#/CREDIT-CARD-Validator">CREDIT-CARD-Validator</a></li>
+                                        <li ng-class="{ active: isActive('/API-Test')}"><a href="#/API-Test">API-Test</a></li>
+                                        <li ng-class="{ active: isActive('/yaml-ValidatorNew')}"><a href="#/yaml-ValidatorNew">yaml-ValidatorNew</a></li>
+    
+                                    </ul>
+                                </div>
+                            </li>
+                        <li class="header-menu">
+                            <span>Extra</span>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span>Documentation</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-calendar"></i>
+                                <span>Calendar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-folder"></i>
+                                <span>Examples</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- sidebar-menu  -->
+            </div>
+            <!-- sidebar-content  -->
+            <!--<div class="sidebar-footer">
+                <a href="#">
+                    <i class="fa fa-bell"></i>
+                    <span class="badge badge-pill badge-warning notification">3</span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-envelope"></i>
+                    <span class="badge badge-pill badge-success notification">7</span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-cog"></i>
+                    <span class="badge-sonar"></span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-power-off"></i>
+                </a>
+            </div>
+        -->
+        </nav>
+        <!-- sidebar-wrapper  -->
+        <main class="page-content">
+            ....
+            <ng-view></ng-view>
+        </main>
+        <!-- page-content" -->
+    </div>
+    <!-- page-wrapper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
