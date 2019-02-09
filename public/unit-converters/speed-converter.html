@@ -1,0 +1,99 @@
+<body id="cbBody">
+    <script src="/js/unitconverter.js"></script>
+    <div class="container-fluid">
+        <div class="row-fluid back" style="padding-top: 0">
+            <div class="span12">
+                <div class="span12" style="border-bottom: 1px solid #e5e5e5;">
+                    <div style="float: left;">
+                        <h1 style="text-align: left; padding-left: 10PX; padding: 15PX; padding-top: 0; padding-bottom: 0; color: rgba(114, 114, 114, 1); letter-spacing: 1.5px; font-size: 24px;"
+                            id="subTitle">Speed Converter </h1>
+                    </div>
+                </div>
+                <div class="span9" style="padding: 15px;">
+                    <div class="span12" style="margin: 0;">
+                        <div class="span8">
+                            <div class="span6">
+                                <h5> From: <span id="select_from_title">centimeters/minute</span> </h5> <input type="text"
+                                    class="span12" id="from_input" value="1" onchange="convert('speed-converter');"
+                                    onkeyup="convert('speed-converter');">
+                                <select size="15" style="height: 555px;" class="span12" id="from_select" onchange="convert('speed-converter');">
+                                    <option value="0" selected="">centimeters/minute</option>
+                                    <option value="1">centimeters/second</option>
+                                    <option value="2">feet/hour</option>
+                                    <option value="3">feet/minute</option>
+                                    <option value="4">feet/second</option>
+                                    <option value="5">inches/minute</option>
+                                    <option value="6">inches/second</option>
+                                    <option value="7">kilometers/hour</option>
+                                    <option value="8">kilometers/second</option>
+                                    <option value="9">knots</option>
+                                    <option value="10">Mach number (ISA/Sea level)</option>
+                                    <option value="11">meters/hour</option>
+                                    <option value="12">meters/minute</option>
+                                    <option value="13">meters/second [m/s]</option>
+                                    <option value="14">miles/hour</option>
+                                    <option value="15">miles/minute</option>
+                                    <option value="16">miles/second</option>
+                                    <option value="17">nautical miles/hour</option>
+                                    <option value="18">Nm/24hr (Volvo Ocean Race)</option>
+                                    <option value="19">speed of light</option>
+                                    <option value="20">yards/hour</option>
+                                    <option value="21">yards/minute</option>
+                                    <option value="22">yards/second</option>
+                                </select>
+                            </div>
+                            <div class="span6">
+                                <h5> To:<span id="select_to_title">centimeters/minute</span> </h5> <input type="text"
+                                    class="span12" id="to_input" readonly="readonly"> <select size="15" style="height: 555px;"
+                                    class="span12" id="to_select" onchange="convert('speed-converter');">
+                                    <option value="0" selected="">centimeters/minute</option>
+                                    <option value="1">centimeters/second</option>
+                                    <option value="2">feet/hour</option>
+                                    <option value="3">feet/minute</option>
+                                    <option value="4">feet/second</option>
+                                    <option value="5">inches/minute</option>
+                                    <option value="6">inches/second</option>
+                                    <option value="7">kilometers/hour</option>
+                                    <option value="8">kilometers/second</option>
+                                    <option value="9">knots</option>
+                                    <option value="10">Mach number (ISA/Sea level)</option>
+                                    <option value="11">meters/hour</option>
+                                    <option value="12">meters/minute</option>
+                                    <option value="13">meters/second [m/s]</option>
+                                    <option value="14">miles/hour</option>
+                                    <option value="15">miles/minute</option>
+                                    <option value="16">miles/second</option>
+                                    <option value="17">nautical miles/hour</option>
+                                    <option value="18">Nm/24hr (Volvo Ocean Race)</option>
+                                    <option value="19">speed of light</option>
+                                    <option value="20">yards/hour</option>
+                                    <option value="21">yards/minute</option>
+                                    <option value="22">yards/second</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        convert('length-converter');
+
+        $("#" + 'length-converter').addClass("currentselected");
+        $("#" + 'length-converter span a').attr('href', '#');
+
+    </script>
+    <script src="/js/common_load_with_home.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            //called after everything loaded
+            setDefaultData();
+            conditionalCode();
+            $("#me").click();
+        });
+
+    </script>
+
+</body>

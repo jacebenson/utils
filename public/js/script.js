@@ -12,6 +12,11 @@
             .when('/about', {
                 templateUrl: 'about.html'
             })
+            .when('/unit-converters/:name*',{
+                templateUrl:function(url){
+                    return '/unit-converters/'+url.name + '.html';
+                }
+            })
             .when('/converters/:name*',{
                 templateUrl:function(url){
                     return '/converters/'+url.name + '.html';

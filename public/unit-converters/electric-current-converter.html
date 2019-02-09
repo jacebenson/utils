@@ -1,0 +1,101 @@
+<body id="cbBody">
+    <script src="/js/unitconverter.js"></script>
+    <div class="container-fluid">
+        <div class="row-fluid back" style="padding-top: 0">
+            <div class="span12">
+                <div class="span12" style="border-bottom: 1px solid #e5e5e5;">
+                    <div style="float: left;">
+                        <h1 style="text-align: left; padding-left: 10PX; padding: 15PX; padding-top: 0; padding-bottom: 0; color: rgba(114, 114, 114, 1); letter-spacing: 1.5px; font-size: 24px;"
+                            id="subTitle">Electric Current Converter </h1>
+                    </div>
+                </div>
+                <div class="span9" style="padding: 15px;">
+                    <div class="span12" style="margin: 0;">
+                        <div class="span8">
+                            <div class="span6">
+                                <h5> From: <span id="select_from_title">abampere [abA]</span> </h5> <input type="text"
+                                    class="span12" id="from_input" value="1" onchange="convert('electric-current-converter');"
+                                    onkeyup="convert('electric-current-converter');">
+                                <select size="15" style="height: 555px;" class="span12" id="from_select" onchange="convert('electric-current-converter');">
+                                    <option value="0" selected="selected">abampere [abA]</option>
+                                    <option value="1">ampere [A]</option>
+                                    <option value="2">biot [Bi]</option>
+                                    <option value="3">centiampere</option>
+                                    <option value="4">coulomb/second</option>
+                                    <option value="5">EMU of current</option>
+                                    <option value="6">ESU of current</option>
+                                    <option value="7">franklin/second</option>
+                                    <option value="8">gaussian electric current</option>
+                                    <option value="9">gigaampere</option>
+                                    <option value="10">gilbert [Gi]</option>
+                                    <option value="11">kiloampere [kA]</option>
+                                    <option value="12">megaampere</option>
+                                    <option value="13">microampere</option>
+                                    <option value="14">milliampere [mA]</option>
+                                    <option value="15">milliamp</option>
+                                    <option value="16">nanoampere</option>
+                                    <option value="17">picoampere</option>
+                                    <option value="18">siemens volt</option>
+                                    <option value="19">statampere [stA]</option>
+                                    <option value="20">teraampere</option>
+                                    <option value="21">volt/ohm</option>
+                                    <option value="22">watt/volt</option>
+                                    <option value="23">weber/henry</option>
+                                </select>
+                            </div>
+                            <div class="span6">
+                                <h5> To:<span id="select_to_title">abampere [abA]</span> </h5> <input type="text" class="span12"
+                                    id="to_input" readonly="readonly"> <select size="15" style="height: 555px;" class="span12"
+                                    id="to_select" onchange="convert('electric-current-converter');">
+                                    <option value="0" selected="selected">abampere [abA]</option>
+                                    <option value="1">ampere [A]</option>
+                                    <option value="2">biot [Bi]</option>
+                                    <option value="3">centiampere</option>
+                                    <option value="4">coulomb/second</option>
+                                    <option value="5">EMU of current</option>
+                                    <option value="6">ESU of current</option>
+                                    <option value="7">franklin/second</option>
+                                    <option value="8">gaussian electric current</option>
+                                    <option value="9">gigaampere</option>
+                                    <option value="10">gilbert [Gi]</option>
+                                    <option value="11">kiloampere [kA]</option>
+                                    <option value="12">megaampere</option>
+                                    <option value="13">microampere</option>
+                                    <option value="14">milliampere [mA]</option>
+                                    <option value="15">milliamp</option>
+                                    <option value="16">nanoampere</option>
+                                    <option value="17">picoampere</option>
+                                    <option value="18">siemens volt</option>
+                                    <option value="19">statampere [stA]</option>
+                                    <option value="20">teraampere</option>
+                                    <option value="21">volt/ohm</option>
+                                    <option value="22">watt/volt</option>
+                                    <option value="23">weber/henry</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        convert('length-converter');
+
+        $("#" + 'length-converter').addClass("currentselected");
+        $("#" + 'length-converter span a').attr('href', '#');
+
+    </script>
+    <script src="/js/common_load_with_home.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            //called after everything loaded
+            setDefaultData();
+            conditionalCode();
+            $("#me").click();
+        });
+
+    </script>
+
+</body>

@@ -1,0 +1,87 @@
+<body id="cbBody">
+    <script src="/js/unitconverter.js"></script>
+    <div class="container-fluid">
+        <div class="row-fluid back" style="padding-top: 0">
+            <div class="span12">
+                <div class="span12" style="border-bottom: 1px solid #e5e5e5;">
+                    <div style="float: left;">
+                        <h1 style="text-align: left; padding-left: 10PX; padding: 15PX; padding-top: 0; padding-bottom: 0; color: rgba(114, 114, 114, 1); letter-spacing: 1.5px; font-size: 24px;"
+                            id="subTitle">Mass Converter </h1>
+                    </div>
+                </div>
+                <div class="span9" style="padding: 15px;">
+                    <div class="span12" style="margin: 0;">
+                        <div class="span8">
+                            <div class="span6">
+                                <h5> From: <span id="select_from_title">carats (metric)</span> </h5> <input type="text"
+                                    class="span12" id="from_input" value="1" onchange="convert('mass-converter');"
+                                    onkeyup="convert('mass-converter');">
+                                <select size="15" style="height: 555px;" class="span12" id="from_select" onchange="convert('mass-converter');">
+                                    <option value="0" selected="selected">carats (metric)</option>
+                                    <option value="1">cental</option>
+                                    <option value="2">Earth masses</option>
+                                    <option value="3">grains</option>
+                                    <option value="4">grams</option>
+                                    <option value="5">hundredweights</option>
+                                    <option value="6">kilograms [kg]</option>
+                                    <option value="7">ounces (US &amp; UK)</option>
+                                    <option value="8">ounces (troy, precious metals)</option>
+                                    <option value="9">pounds [lbs] (US &amp; UK)</option>
+                                    <option value="10">pounds (troy, precious metals)</option>
+                                    <option value="11">Solar masses</option>
+                                    <option value="12">slugs (g-pounds)</option>
+                                    <option value="13">stones</option>
+                                    <option value="14">tons (UK or long)</option>
+                                    <option value="15">tons (US or short)</option>
+                                    <option value="16">tonnes</option>
+                                </select>
+                            </div>
+                            <div class="span6">
+                                <h5> To:<span id="select_to_title">carats (metric)</span> </h5> <input type="text"
+                                    class="span12" id="to_input" readonly="readonly"> <select size="15" style="height: 555px;"
+                                    class="span12" id="to_select" onchange="convert('mass-converter');">
+                                    <option value="0" selected="selected">carats (metric)</option>
+                                    <option value="1">cental</option>
+                                    <option value="2">Earth masses</option>
+                                    <option value="3">grains</option>
+                                    <option value="4">grams</option>
+                                    <option value="5">hundredweights</option>
+                                    <option value="6">kilograms [kg]</option>
+                                    <option value="7">ounces (US &amp; UK)</option>
+                                    <option value="8">ounces (troy, precious metals)</option>
+                                    <option value="9">pounds [lbs] (US &amp; UK)</option>
+                                    <option value="10">pounds (troy, precious metals)</option>
+                                    <option value="11">Solar masses</option>
+                                    <option value="12">slugs (g-pounds)</option>
+                                    <option value="13">stones</option>
+                                    <option value="14">tons (UK or long)</option>
+                                    <option value="15">tons (US or short)</option>
+                                    <option value="16">tonnes</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        convert('length-converter');
+
+        $("#" + 'length-converter').addClass("currentselected");
+        $("#" + 'length-converter span a').attr('href', '#');
+
+    </script>
+    <script src="/js/common_load_with_home.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            //called after everything loaded
+            setDefaultData();
+            conditionalCode();
+            $("#me").click();
+        });
+
+    </script>
+
+</body>
